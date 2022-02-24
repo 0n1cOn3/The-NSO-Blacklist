@@ -17,3 +17,7 @@ You can check the huge writeup here: https://www.amnesty.org/en/latest/research/
 ## PiHole
 
 the list can be added to pihole and giving a little bit a protection not to get attacked nor getting any other packages from there respectively servers.
+
+## Other Sources
+
+https://github.com/Red-Laboratory/NSO-hosts

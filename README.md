@@ -29,5 +29,7 @@ The list can be added to pihole and giving a little bit a protection not to get 
 ## Other Sources
 
 🔗    https://github.com/Red-Laboratory/NSO-hosts
+
 🔗    https://github.com/jjjxu/NSO_Pegasus_Blocklist
+
 🔗    https://github.com/AmnestyTech/investigations

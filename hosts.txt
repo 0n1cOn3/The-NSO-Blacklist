@@ -351,7 +351,6 @@ d3f8l1b22aqm00.cloudfront.net
 d3fg0tjavna610.cloudfront.net
 d3fqnvq561ch00.cloudfront.net
 d3fr1as3gjs800.cloudfront.net
-d3fthpvv7fzx00.cloudfront.net
 d3fu7mjhcl4920.cloudfront.net
 d3fv7d7lhecb10.cloudfront.net
 d3gaz6p7p4i10.cloudfront.net

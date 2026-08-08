@@ -82,3 +82,7 @@ https://raw.githubusercontent.com/0n1cOn3/The-NSO-Blacklist/main/C2-hosts.txt
 🔗 **The Paragon Blacklist** (Graphite IOCs): https://github.com/0n1cOn3/The-Paragon-Blacklist
 
 🔗 **The Intellexa Blocklist** (Predator IOCs): https://github.com/0n1cOn3/The-Intellexa-Blocklist
+
+🔗 **The Candiru Blocklist** (DevilsTongue IOCs): https://github.com/0n1cOn3/The-Candiru-Blocklist
+
+🔗 **The Spyware Archive** (Historical IOCs): https://github.com/0n1cOn3/The-Spyware-Archive

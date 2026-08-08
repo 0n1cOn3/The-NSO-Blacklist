@@ -1,0 +1,130 @@
+# NSO Group Pegasus — Internal Architecture & Infection Vectors
+# Source: Amnesty International — "Inside Pegasus: The evolution of the world's most notorious spyware"
+# URL: https://securitylab.amnesty.org/latest/2026/07/inside-pegasus-the-evolution-of-the-worlds-most-notorious-spyware/
+# Date: July 2026
+# Updated: 2026-08-08
+#
+# Based on leaked NSO Group documents from WhatsApp v. NSO Group court filings (ECF 796-800).
+# This file documents Pegasus internal architecture, vector names, and operational methodology.
+# ============================================================
+
+# === Pegasus System Architecture ===
+#
+# NSO Group operates Pegasus as a managed service, NOT a standalone product.
+# The government customer gets a user dashboard installed on-premises, but NSO Group:
+#   - Builds and maintains all exploits and infection vectors
+#   - Operates the anonymizing "White Services" infrastructure
+#   - Runs a Network Operation Center (NOC) to monitor attacks
+#   - Creates fresh, customer-specific accounts/domains for each deployment
+#
+# Infrastructure layers:
+#
+# [Customer Dashboard] — on-premises at government customer site
+#       |
+# [Anonymization Network] — "whitened" relay servers (NSO-operated)
+#   - Separate infrastructure per customer (no cross-contamination)
+#   - Paid for with cryptocurrencies
+#       |
+# [Attack Accounts & Infection Servers] — customer-specific
+#   - Anonymous Gmail/Outlook accounts → registered as Apple IDs
+#   - Customer-specific domain names
+#   - Each account/domain used by ONLY ONE customer (forensic fingerprint)
+
+# === Infection Vectors (NSO Group Internal Names) ===
+
+# Zero-click ("Covert"):
+#   Heaven     — First 0-click Android vector (via WhatsApp, ~Jan 2018)
+#   Erised     — Samsung-only WhatsApp 0-click (DNG file exploit)
+#   Eden       — WhatsApp-based vector
+#   [Hummingbird] — Umbrella term for Heaven/Eden/Erised (WhatsApp exploit family)
+#   iOS Covert — iMessage-based 0-click (uses malicious Apple IDs)
+#   Android Covert — various Android 0-click methods
+
+# 1-click ("Triggered"):
+#   Social engineering lures (SMS/WhatsApp with malicious links)
+#   System helps operator craft tailored messages
+
+# Network injection:
+#   Tactical Network Element — MiTM network injection
+#   Inline — network injection via infrastructure
+
+# Physical:
+#   Physical access vector (operator has device access)
+#   [Redacted] — Radio/WiFi/Bluetooth within-range attack
+
+# === White Services Department ===
+# Dedicated NSO team for anonymous infrastructure procurement:
+#   - Anonymous Gmail/Outlook email accounts
+#   - iCloud/Apple ID registration for iOS targeting
+#   - WhatsApp accounts for WhatsApp-based vectors
+#   - Domain registration (cryptocurrency-paid)
+#   - Server rental (anonymized)
+# Key rule: SEPARATE infrastructure per customer, no sharing
+
+# === Abuse Prevention System ===
+# NSO maintains a system called "Abuse Prevention" that:
+#   - Limits how often the same person can be targeted
+#   - Enforces wait periods between targeting attempts
+#   - Different restrictions per vector
+#   - "Whitelist" feature for customer test devices (unlimited retries)
+
+# === NSO Internal Test Deployments ===
+# "Sales 3" and "Sales 6" — internal Pegasus systems for demos/testing
+# Test numbers include:
+#   +12027655322 — NSO Group sales representative (US number)
+#   +51937742595 — Peruvian test target (May 2019)
+# Test infections visible in Pegasus Project dataset, validating forensic methodology
+
+# === Forensic Attribution Methodology (Validated) ===
+# Each Pegasus customer receives UNIQUE:
+#   - Apple IDs / iCloud accounts (for iOS 0-click delivery)
+#   - Email addresses (Gmail/Outlook, anonymously registered)
+#   - Domain names (for infection servers)
+#   - WhatsApp accounts
+#
+# These function as customer fingerprints:
+#   Same account/domain across multiple victims = same Pegasus customer
+#   Amnesty: "Across hundreds of cases, never observed a single attacker
+#   account or infection domain being used by more than one customer"
+#
+# Multiple Apple IDs probing same target = system testing different vectors
+# This allows researchers to link different vector accounts to same customer
+
+# === Apple ID Attack Infrastructure ===
+# iOS 0-click vectors use specially created Apple IDs:
+#   - NSO creates anonymous Gmail/Outlook accounts first
+#   - Registers these as iCloud accounts
+#   - Uses Apple IDs to send iMessage exploits
+#   - Gmail addresses commonly observed in forensic traces
+# Example accounts from Pegasus Project:
+#   (See AmnestyTech 2021-07-18_nso/emails.txt for known attacker emails)
+
+# === Pegasus Dashboard Features ===
+# Browser-based console, locally accessible only at customer site
+# Roles: analyst, operator, supervisor, administrator
+# Features visible in leaked screenshots:
+#   - Target phone number input
+#   - Device fingerprinting results
+#   - Vector selection (Covert/Triggered — system chooses automatically)
+#   - Installation status tracking
+#   - "Credentials" tab (stolen passwords/tokens)
+#   - Cloud data extraction (iCloud/Google account data)
+
+# === Key Court Case Documents (ECF references) ===
+# ECF 796-5  — Video Deposition of Ramon Eshkar (NSO Group employee)
+# ECF 796-6  — Expert Report of Anthony Vance
+# ECF 796-15 — Pegasus version 3.0 Product Description (August 2018)
+# ECF 796-18 — Abuse Prevention documentation
+# ECF 796-19 — Heaven vector release notes
+# ECF 800-3  — White Services designation list (infrastructure registration)
+
+# === Evolution Timeline ===
+# 2013: Blackberry targeting (early brochures)
+# 2016-2017: iOS/Android focus, SMS-based 1-click
+# 2018-01: Heaven (first Android 0-click via WhatsApp)
+# 2018-2020: WhatsApp 0-click family (Heaven/Eden/Erised/Hummingbird)
+# 2019: iMessage-based iOS 0-click vectors deployed
+# 2020-2021: WhatsApp v. NSO lawsuit filed, Pegasus Project published
+# 2021-2024: Apple Lockdown Mode, iOS security improvements force vector changes
+# 2024-2025: NSO continues developing new vectors; Android/iOS both targeted
+# 2026-07: Amnesty publishes internal architecture analysis from court documents

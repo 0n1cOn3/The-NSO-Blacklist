@@ -51,6 +51,14 @@ https://raw.githubusercontent.com/0n1cOn3/The-NSO-Blacklist/main/hosts.txt
 https://raw.githubusercontent.com/0n1cOn3/The-NSO-Blacklist/main/C2-hosts.txt
 ```
 
+### ⚠️ Limitations
+
+- This is **not** a complete list of all NSO Group infrastructure
+- Some customers prevent Internet scanning exposure
+- IPs rotate; domains may be decommissioned or repurposed
+- False positives are possible — investigate before taking action
+- NSO Group actively evolves its infrastructure TTPs
+
 ## Other Sources / Forks
 
 🔗 https://github.com/Red-Laboratory/NSO-hosts

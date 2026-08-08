@@ -26,7 +26,7 @@ This is a list of domains and DNSs which has been collected from Amnesty Interna
 The list can be added to pihole and giving a little bit a protection not to get attacked nor getting any other packages from their respective servers.
 
 
-## Other Sources
+## Other Sources / Forks
 
 🔗    https://github.com/Red-Laboratory/NSO-hosts
 

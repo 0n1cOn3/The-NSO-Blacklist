@@ -39,7 +39,8 @@ See `pegasus-architecture.txt` for the full technical breakdown.
 |------|-------------|
 | `hosts.txt` | Pegasus-related domains and IPs (Pi-hole / AdGuard format) |
 | `C2-hosts.txt` | Known C2 IP:port pairs |
-| `pegasus-architecture.txt` | **NEW** — Internal architecture, vector names, White Services methodology (from 2026 court document analysis) |
+| `pegasus-architecture.txt` | Internal architecture, vector names, White Services methodology (from 2026 court document analysis) |
+| `pegasus-architecture.svg` | Visual architecture diagram (SVG) — delivery vectors, exploitation chain, C2 infrastructure |
 
 ### Pi-hole / AdGuard Home
 
@@ -58,7 +59,13 @@ https://raw.githubusercontent.com/0n1cOn3/The-NSO-Blacklist/main/C2-hosts.txt
 
 🔗 https://github.com/AmnestyTech/investigations
 
+🔗 **Amnesty Security Lab — full research archive:**
+    https://securitylab.amnesty.org/search/
+
 🔗 https://securitylab.amnesty.org/latest/2026/07/inside-pegasus-the-evolution-of-the-worlds-most-notorious-spyware/
+
+🔗 **Pegasus Project Case Study (Amnesty):**
+    https://securitylab.amnesty.org/case-study-the-pegasus-project/
 
 ---
 
